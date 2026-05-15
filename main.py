@@ -12,14 +12,8 @@ app.add_middleware(
     allow_headers=["*"]
 )
 
-
-client = MongoClient(
-    host="157.253.236.88",
-    port=8087,
-    username="ISIS2304A31202610",
-    password="BWYJRDZ27uic"
-)
-
+#client = MongoClient(os.environ["MONGO_URI"])
+client = MongoClient("mongodb://ISIS2304A31202610:BWYJRDZ27uic@157.253.236.88:8087")
 db = client["ISIS2304A31202610"]
 
 @app.get("/")
