@@ -10,10 +10,10 @@ app.add_middleware(
     allow_origins=["*"],
     allow_methods=["*"],
     allow_headers=["*"]
+    
 )
 
-#client = MongoClient(os.environ["MONGO_URI"])
-client = MongoClient("mongodb://ISIS2304A31202610:BWYJRDZ27uic@157.253.236.88:8087")
+client = MongoClient(os.environ["MONGO_URI"])
 db = client["ISIS2304A31202610"]
 
 @app.get("/")
